@@ -16,27 +16,35 @@ davisdata <- read.csv(file="UCDavis.csv")
 ```
 ## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row you choose to sit in??
 
-#Introduction
+# Introduction
+
 
 $H_0$ There isnt a difference between the alcohol consumption and the row you sit in.
 
 $H_A$ There is a difference based on the alcohol you consume and the row you sit in. 
 
+# Methods
+
+The response variable is numerical and the explanatory variable is catagorical. Therefore we use numerical~cat.
+
+## Results 
 
 
-
-
+## Graphical Results 
 ## Now with ggplot - first select the basic data
 
 ```{r}
 basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```
+
 ## Now add in boxplot
 
 ```{r}
 basicCN + geom_boxplot()
 ```
-  
+
+
+The row in the back seats consumes a lot more drink than the front and middle row. The front and middle seems to drink about the same.
   
 ### get fancy  
 
