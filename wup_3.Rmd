@@ -60,10 +60,25 @@ favstats(alcohol~Seat,data=davisdata)
 So the back row by the 3rd quarter drank 3x more alcohol a week than the front row and 2x more thhan the middle.
 
 
-
 ## Inferential Tests
 
 
-## Conclusions
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
 
+
+The p value is 0.000116 is less than 0.005. This means that you rejected the null which is thhere is no difference and i concluded that there is a difference based on the alcohol consumed by row.
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+
+We dont have evidence that the difference in the alcohol consumption between the middle and front row. The only difference we got is from the back row consuming more than the front and middle row. 
+
+## Conclusions
+Is there a difference between the alcohol consumed between the row you choose to sit in??
+There is a difference in consumption of alcohol based on which row you sit in because by the graph it shows that the guys in the back drink more than the front and middle combined. The p value is less than the average which is 0.005.So that means you reject the null.
 
