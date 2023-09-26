@@ -54,7 +54,15 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 
 ## Numerical Summarys 
 
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
+So the back row by the 3rd quarter drank 3x more alcohol a week than the front row and 2x more thhan the middle.
+
+
+
 ## Inferential Tests
+
 
 ## Conclusions
 
